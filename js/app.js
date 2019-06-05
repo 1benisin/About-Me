@@ -8,20 +8,25 @@ var q3Truth = 'Y';
 var q4Truth = 'Y';
 var q5Truth = 'Y';
 
+
 var q1Answer = prompt('(Y/N) Is my full name Benjamin James Clark?').toUpperCase();
 console.log(q1Answer);
-if (q1Answer === q1Truth) {
+if (q1Answer === 'N') {
     alert('Right, my son\'s middle name is James. Mine is Jacob.')
-} else {
+} else if (q1Answer === 'Y') {
     alert('Wrong, my son\'s middle name is James. Mine is Jacob.')
+} else {
+    alert('Type a \'Y\' for Yes and a \'N\' for No')
 }
 
 var q2Answer = prompt('(Y/N) Do I have more than 5 siblings?').toUpperCase();
 console.log(q2Answer);
-if (q2Answer === q2Truth) {
+if (q2Answer === 'Y') {
     alert('You are correct. I have 7 siblings')
-} else {
+} else if (q2Answer === 'N'){
     alert('Nope, I\'m one of 8. My mom was busy')
+} else {
+    alert('Type a \'Y\' for Yes and a \'N\' for No')
 }
 
 var q3Answer = prompt('(Y/N) Do I live with parents?').toUpperCase();
