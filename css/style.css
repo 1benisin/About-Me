@@ -1,7 +1,7 @@
 
 
 li {
-    list-style: georgian inside url('../img/poo-emoji.png');
+    list-style: inside square;
     font-family: Georgia, serif;
     font-size: 14px;
     letter-spacing: 0.6px;
