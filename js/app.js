@@ -57,40 +57,70 @@
 //     alert('Hey, I\'m a nice guy. I promise not to walk around naked in front of the windows.')
 // }
 
-// // ___ Question 6
+// ___ Question 6
 
+var guessedCorrect = false;
+var bucketListLength = 100;
 
-// ___ Question 7
-
-    // - Uppercase array of visited countries
-var countriesVisited = ['USA', 'US', 'united states of america', 'spain', 'france', 'uk', 'united kingdom', 'england', 'scotland', 'ireland', 'italy', 'india', 'canada', 'mexico', 'australia'];
-for (var i = 0; i < countriesVisited.length; i++) {
-    countriesVisited[i] = countriesVisited[i].toUpperCase();
-}
-console.log(countriesVisited);
-
-    // - test if user guess is in array
-var gotItRightQ7 = false;
-var numberOfGuessesQ7 = 5;
-
-while (!gotItRightQ7 && numberOfGuessesQ7 > 0) {
-            // - propt question
-        var userGuess = prompt('Guess the name of a country I\'ve visited? You only get 5 guesses').toUpperCase();
-        console.log(userGuess);
-        // - check array for match
-    for (var index = 0; index < countriesVisited.length; index++) {
-            // - exit loop if right
-        if (countriesVisited[index] === userGuess) {
-            console.log('user guessed correct.', ' User\'s guess: ', userGuess)
-            gotItRightQ7 = true;
-            break;
-        }
+    // guessing loop
+while (!guessedCorrect) {
+    // guess how many things are on my bucket list
+    var userGuessQ6 = null;
+    userGuessQ6 = parseInt(prompt('Guess how many things are on my bucket list. \n Enter a number: '));
+    // if correct. you're correct
+    if (userGuessQ6 === bucketListLength){
+        alert('That\'s right. 100 things still on my bucket list. I\'ve barely lived');
+        console.log('guessed Q6 correct');
+        guessedCorrect = true;
+    // if too low guess again
+    } else if (userGuessQ6 < bucketListLength){
+        alert('Too Low');
+        console.log('Too Low');
+    // if too high guess again
+    } else if (userGuessQ6 > bucketListLength){
+        alert('Too High');
+        console.log('Too High');
+    // check for weird stuff
+    // } else if (isNaN(userGuessQ6) || userGuessQ6.includes('') ){
+    //     alert('weird entry: You have to enter a number');
+    } else {
+        alert('2nd You have to enter a number');
     }
-    numberOfGuessesQ7--;
 }
-    // alert user of Q7 result
-if (gotItRightQ7){
-    alert('You got question 7 right. ' + userGuess + " is a country I\'ve visited. I've also visited " + countriesVisited);
-} else{
-    alert('Sorry. You\'ve used all you guesses. I\'ve visited: ' + countriesVisited);
-}
+    
+
+
+// // ___ Question 7
+
+//     // - Uppercase array of visited countries
+// var countriesVisited = ['USA', 'US', 'united states of america', 'spain', 'france', 'uk', 'united kingdom', 'england', 'scotland', 'ireland', 'italy', 'india', 'canada', 'mexico', 'australia'];
+// for (var i = 0; i < countriesVisited.length; i++) {
+//     countriesVisited[i] = countriesVisited[i].toUpperCase();
+// }
+// console.log(countriesVisited);
+
+//     // - test if user guess is in array
+// var gotItRightQ7 = false;
+// var numberOfGuessesQ7 = 5;
+
+// while (!gotItRightQ7 && numberOfGuessesQ7 > 0) {
+//             // - propt question
+//         var userGuessQ7 = prompt('Guess the name of a country I\'ve visited? You only get 5 guesses').toUpperCase();
+//         console.log(userGuessQ7);
+//         // - check array for match
+//     for (var index = 0; index < countriesVisited.length; index++) {
+//             // - exit loop if right
+//         if (countriesVisited[index] === userGuessQ7) {
+//             console.log('user guessed correct.', ' User\'s guess: ', userGuessQ7)
+//             gotItRightQ7 = true;
+//             break;
+//         }
+//     }
+//     numberOfGuessesQ7--;
+// }
+//     // alert user of Q7 result
+// if (gotItRightQ7){
+//     alert('You got question 7 right. ' + userGuessQ7 + " is a country I\'ve visited. I've also visited " + countriesVisited);
+// } else{
+//     alert('Sorry. You\'ve used all you guesses. I\'ve visited: ' + countriesVisited);
+// }
