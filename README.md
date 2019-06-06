@@ -11,3 +11,8 @@ Features:
     - add 6th question guessing how many items are on my bucket list (“too high” or “too low”)
     - 7th question guessing countries I've been too (iterate over array, six tries, print full array)
     - add endgame message “You got 4 out of 7 questions correct, _username_! Better luck next time.”
+
+6/6/19
+Driver: Leyla Li
+Navagator: Benjamin Clark
+We turned questions into functions.
