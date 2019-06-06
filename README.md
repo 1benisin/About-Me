@@ -5,7 +5,7 @@ Features:
   6/6/19
     - make unordered list of work history
     - make unordered list of education
-    - make unordered list of project ideas
+    - make ordered list of project ideas
     - change guessing game to pull first char of answer
     - ordered list of Top10 bucket list
     - add 6th question guessing how many items are on my bucket list (“too high” or “too low”)

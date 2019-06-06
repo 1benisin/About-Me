@@ -1,5 +1,5 @@
 
-'use strict';   
+'use strict';
 
 
 var q1Truth = 'N';
@@ -35,7 +35,7 @@ console.log(q2Answer);
 if (q2Answer === 'Y') {
     alert('You are correct. I have 7 siblings')
     userCorrectAnswers++;
-} else if (q2Answer === 'N'){
+} else if (q2Answer === 'N') {
     alert('Nope, I\'m one of 8. My mom was busy')
 } else {
     alert('Type a \'Y\' for Yes and a \'N\' for No')
@@ -79,31 +79,31 @@ if (q5Answer === q5Truth) {
 var guessedCorrect = false;
 var bucketListLength = 100;
 
-    // guessing loop
+// guessing loop
 while (!guessedCorrect) {
     // guess how many things are on my bucket list
     var userGuessQ6 = null;
     userGuessQ6 = parseInt(prompt('Guess how many things are on my bucket list. \n Enter a number: '));
     // if correct. you're correct
-    if (userGuessQ6 === bucketListLength){
+    if (userGuessQ6 === bucketListLength) {
         alert('That\'s right. 100 things still on my bucket list. I\'ve barely lived');
         console.log('guessed Q6 correct');
         guessedCorrect = true;
-    // if too low guess again
-    } else if (userGuessQ6 < bucketListLength){
+        // if too low guess again
+    } else if (userGuessQ6 < bucketListLength) {
         alert('Too Low');
         console.log('Too Low');
-    // if too high guess again
-    } else if (userGuessQ6 > bucketListLength){
+        // if too high guess again
+    } else if (userGuessQ6 > bucketListLength) {
         alert('Too High');
         console.log('Too High');
-    // check for weird stuff
+        // check for weird stuff
     } else {
         alert('Weird entry. You have to enter a number');
     }
 }
 userCorrectAnswers++;
-    
+
 
 
 // ___ Question 7
@@ -121,12 +121,12 @@ var gotItRightQ7 = false;
 var numberOfGuessesQ7 = 5;
 
 while (!gotItRightQ7 && numberOfGuessesQ7 > 0) {
-            // - propt question
-        var userGuessQ7 = prompt('Guess the name of a country I\'ve visited? You only get 5 guesses').toUpperCase();
-        console.log(userGuessQ7);
-        // - check array for match
+    // - propt question
+    var userGuessQ7 = prompt('Guess the name of a country I\'ve visited? You only get 5 guesses').toUpperCase();
+    console.log(userGuessQ7);
+    // - check array for match
     for (var index = 0; index < countriesVisited.length; index++) {
-            // - exit loop if right
+        // - exit loop if right
         if (countriesVisited[index] === userGuessQ7) {
             console.log('user guessed correct.', ' User\'s guess: ', userGuessQ7)
             gotItRightQ7 = true;
@@ -135,11 +135,11 @@ while (!gotItRightQ7 && numberOfGuessesQ7 > 0) {
     }
     numberOfGuessesQ7--;
 }
-    // alert user of Q7 result
-if (gotItRightQ7){
+// alert user of Q7 result
+if (gotItRightQ7) {
     alert('You got question 7 right. ' + userGuessQ7 + " is a country I\'ve visited. I've also visited " + countriesVisitedPrint);
     userCorrectAnswers++;
-} else{
+} else {
     alert('Sorry. You\'ve used all you guesses. I\'ve visited: ' + countriesVisitedPrint);
 }
 

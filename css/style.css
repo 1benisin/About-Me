@@ -1,5 +1,23 @@
 
 
+div {
+    padding: 20px;
+    margin: 20px;
+    fill: burlywood;
+}
+
+h2 {
+    padding: 2px;
+    margin: 2px;
+    font-size: 2em;
+
+}
+
+ol li {
+    list-style-type:decimal;
+    color: red;
+}
+
 li {
     list-style: inside square;
     font-family: Georgia, serif;
